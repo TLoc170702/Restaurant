@@ -1,0 +1,143 @@
+.BookTable_wraper{
+    flex-direction: row !important;
+    background-color: #3b362e;
+    color: #fff;
+}
+
+.Testimonial{
+    width: 50%;
+    margin: -120px 0 !important;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    background: url(./../../assets/home-3-intertactive-image-1.jpg) no-repeat;
+    background-size: cover;
+    padding: 35px;
+}
+
+.Testimonial_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 15px;
+    background-color: rgba(131, 131, 131, 0.1);
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.Testimonial_wrapper p{
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+.Testimonial_wrapper .Profile{
+    display: flex;
+    gap: 16px;
+}
+
+.Testimonial_wrapper .Profile img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-top: 12px;
+}
+
+.Testimonial_wrapper .Profile h2 {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 30px;
+}
+.Testimonial_wrapper .Profile h2 span{
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+
+.bookTable_Container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bookTable_Container small{
+    color: #9b804e;
+    font-size: 22px;
+}
+.bookTable_Container h2{
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.Cards{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Cards .Card{
+    padding: 40px 30px;
+    background-color: #806b48;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    outline: 1px dashed #fff;
+    outline-offset: -10px;
+}
+
+.Cards .Card img{
+    width: 140px;
+    height: 40px;
+}
+
+.Cards .Card .card_content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 70%;
+}
+
+.Cards .Card .card_content h3{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.Cards .Card .card_content a{
+    font-size: 16px;
+    color: #fff;
+    margin: 12px 0;
+}
+
+@media screen and (max-width:1200px) {
+    .Cards .Card{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Cards .Card .card_content{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .BookTable_wraper{
+        flex-direction: column !important;
+    }
+
+    .bookTable_Container{
+        width: 100%;
+        margin-top: 140px;
+
+    }
+
+    .Testimonial{
+        width: 100%;
+    }
+}

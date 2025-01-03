@@ -1,0 +1,187 @@
+.About_wrapper{
+    flex-direction: row !important;
+    z-index: 1;
+    position: relative;
+}
+
+.About_wrapper::after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(./../../assets/bg-art-icon-2x.svg) no-repeat;
+    background-position: top;
+    background-size: 100%;
+    z-index: -1;
+    opacity: 0.015;
+}
+
+.About_content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.About_content h2{
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.About_content h2 span{
+    color: #9b804e;
+}
+
+.About_cards{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+
+    position: relative;
+}
+
+.About_cards::after , .About_cards::before{
+    content: '';
+    position: absolute;
+    background-color: #9b804e35;
+}
+
+.About_cards::after{
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 45%;
+}
+.About_cards::before{
+    height: 1px;
+    width: 100%;
+    top: 48%;
+    left: 0%;
+}
+
+.About_card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+
+    padding: 15px;
+}
+
+.About_card img{
+    padding: 10px;
+    background-color: #fff3dc83;
+    height: 50px;
+    width: 50px;
+    box-sizing: content-box;
+
+    border-radius: 50%;
+    border: 0.5px solid #9b804e;
+
+    outline: 1px solid #9b804e;
+    outline-offset: -5px;
+    transition: .6s;
+}
+
+.About_card:hover img{
+    transform: scale(1.02);
+    box-shadow: 4px 4px 2px #9b804e;
+}
+
+
+@media screen and (max-width:1400px) {
+
+    .About_wrapper{
+        max-height: 75vh;
+        overflow: hidden;
+    }
+
+    .About_content h2{
+        font-size: 50px;
+    }
+
+    .About_cards::after{
+        left: 48%;
+    }
+    .About_cards::before{
+        top: 54%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .About_wrapper{
+        flex-direction: column !important;
+        max-height: none;
+    }
+
+    .About_content , .About_cards{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .About_cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .About_cards::after , 
+    .About_cards::before{
+        display: none;
+    }
+}
+
+
+.Booking_container{
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    background-color: #fff;
+    align-items: end;
+    gap: 30px;
+    color: #372606;
+    outline: 1.5px dashed #372606;
+    outline-offset: -10px;
+    box-shadow: 0 5px 4px rgba(131, 131, 131, 0.5);
+}
+
+.Booking_container input{
+    height: 28px;
+    outline: none;
+    padding: 0 12px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.Booking_container button{
+    width: 180px;
+}
+
+
+@media screen and (max-width:900px) {
+    .Booking_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .Booking_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Booking_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .Booking_container input{
+        height: 40px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,79 @@
+/* Định dạng cho toàn bộ ứng dụng */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Chiều cao toàn màn hình */
+}
+
+  /* Sidebar Container */
+.sidebar {
+  width: 200px;
+  background-color: #f5f5f5;
+  height: 100vh;
+  position: fixed;
+  top: 64px; /* Đặt dưới Navbar */
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px; /* Khoảng cách từ trên cùng */
+}
+
+/* Sidebar Links */
+.sidebar .list-item {
+  display: block;
+  padding: 15px 20px; /* Tạo khoảng cách bên trong */
+  font-size: 16px; /* Kích thước chữ */
+  font-family: 'Arial', sans-serif; /* Font chữ */
+  color: #333; /* Màu chữ */
+  text-decoration: none; /* Bỏ gạch chân */
+  border-radius: 4px; /* Bo góc nhẹ */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng hover */
+}
+
+/* Hover Effect */
+.sidebar .list-item:hover {
+  background-color: #1976d2; /* Màu nền khi hover */
+  color: #ffffff; /* Màu chữ khi hover */
+}
+
+/* Active Link Style */
+.sidebar .list-item:active {
+  background-color: #005bb5; /* Màu nền khi bấm */
+}
+
+
+.navbar {
+  height: 64px;                 /* Chiều cao cố định */
+  position: fixed;              /* Cố định Navbar */
+  top: 0;                       /* Căn trên */
+  left: 0;                      /* Căn trái */
+  width: 100%;                  /* Chiều rộng toàn màn hình */
+  z-index: 1100;                /* Cao hơn Sidebar */
+  background-color: #1976d2;    /* Màu nền */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+
+/* Định dạng cho nội dung chính */
+.main-content {
+  margin-left: 200px;   /* Tạo khoảng cách bằng chiều rộng của Sidebar */
+  padding: 20px;        /* Khoảng cách trong nội dung */
+  background-color: #fff; /* Màu nền cho nội dung */
+  min-height: 100vh;    /* Chiều cao tối thiểu cho nội dung */
+}
+
+
+
+.content {
+  flex: 1; 
+  padding: 20px;
+  padding-top: 70px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+
+
+
+

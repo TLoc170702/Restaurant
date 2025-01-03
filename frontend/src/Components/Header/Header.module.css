@@ -1,0 +1,168 @@
+.header_wrapper{
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+}
+
+.Swiper_Slider_wrapper{
+    width: 60%;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+.Swiper_Slider_wrapper::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(180deg , #ffffff 40% , #ffffff00 80%);
+    z-index: 3;
+}
+
+.Swiper_Slider_wrapper img{
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.header_content{
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.header_content small{
+    font-size: 28px;
+}
+
+.header_content h2{
+    font-size: 75px;
+    margin: 20px 0;
+    color: #372606;
+}
+
+.rating_container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.rating_container img{
+    height: auto;
+    width: 180px;
+}
+
+.Booking_container{
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: #fff;
+    align-items: end;
+    gap: 30px;
+    color: #372606;
+    outline: 1.5px dashed #372606;
+    outline-offset: -10px;
+    box-shadow: 0 5px 4px rgba(131, 131, 131, 0.5);
+}
+
+.Booking_container input{
+    height: 28px;
+    outline: none;
+    padding: 0 12px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.Booking_container button{
+    width: 180px;
+}
+
+@media screen and (max-width:1600px) {
+    .header_content h2{
+        font-size: 65px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .Swiper_Slider_wrapper{
+        width: 45%;
+    }
+
+    .header_content{
+        left: 48%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .header_content{
+        left: 54%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .header_content{
+        left: 0%;
+        width: 100%;
+        transform: translate(0);
+        padding: 0 12%;
+    }
+
+    .Booking_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .header_content h2{
+        font-size: 55px;
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .Booking_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .header_content{
+        top: 30%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Swiper_Slider_wrapper{
+        width: 100%;
+    }
+
+    .header_content{
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
+        top: 15%;
+        padding: 20px 5%;
+        width: 80%;
+        left: 10%;
+    }
+
+    .header_content h2{
+        font-size: 25px;
+    }
+
+    .Booking_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .rating_container img{
+        width: 100px;
+    }
+
+    .Booking_container input{
+        height: 40px;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  list-style: none;
+  text-decoration: none;
+
+  font-family: 'Forum';
+
+  scroll-behavior: smooth;
+}
+
+button{
+  height: 45px;
+  width: 148px;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 3px rgba(131, 131, 131, 0.6);
+  position: relative;
+  background: #9b804e;
+  overflow: hidden;
+  color: #fff;
+  outline: 1px dashed #ddd;
+  outline-offset: -6px;
+  cursor: pointer;
+  transition: .6s;
+}
+
+button::after{
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: -155%;
+  left: -20%;
+  background: url(./assets/bg-art-icon-2x.svg) no-repeat center;
+  opacity: 0.1;
+}
+
+button:hover{
+  transform: scale(0.95);
+}
+
+button:hover:after{
+  animation: rotate 5s infinite linear;
+}
+
+button:active{
+  transform: scale(0.8);
+}
+
+
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 12%;
+}
+
+.section_heading{
+  color: #9b804e;
+  font-size: 25px;
+  font-weight: 500;
+}

@@ -1,0 +1,120 @@
+.contact_wrapper{
+    flex-direction: row !important;
+}
+.Reservation{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    background: url(./../../assets/contact-form-img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+    outline: 2px dashed #9b804e;
+    outline-offset: -10px;
+}
+
+.Reservation::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #442e06e3;
+    z-index: -1;
+}
+
+.Reservation img{
+    width: 80px;
+}
+
+.Reservation h2{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    width: 70%;
+}
+
+.form{
+    width: 60%;
+}
+
+.form h2{
+    font-size: 54px;
+}
+.form p{
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.input_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.input_wrapper{
+    height: 65px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+input , textarea{
+    height: 100%;
+    width: 100%;
+    padding: 0 20px ;
+    font-size: 20px;
+    outline: none;
+}
+
+textarea{
+    height: 200px;
+    padding: 10px 20px;
+}
+
+.form button{
+    margin-top: 40px;
+}
+
+@media screen and (max-width:1400px) {
+    .Reservation h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:900px) {
+    .contact_wrapper{
+        flex-direction: column !important;
+    }
+
+    .Reservation{
+        width: 70%;
+    }
+
+    .form{
+        width: 100%;
+    }
+
+    .form p{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Reservation{
+        width: 80%;
+    }
+}
+@media screen and (max-width:500px) {
+    .Reservation{
+        width: 100%;
+    }
+}

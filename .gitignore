@@ -1,0 +1,30 @@
+# Loại trừ node_modules trong cả frontend và backend
+frontend/node_modules/
+backend/node_modules/
+smart-contract/node_modules/
+
+
+# Loại trừ tệp .env trong cả frontend, backend và smart_contract
+frontend/.env.development
+frontend/.env.production
+backend/.env
+smart-contract/.env
+
+# Loại trừ build output hoặc thư mục không cần thiết
+frontend/build/
+backend/dist/
+# backend/.gitignore
+# backend/package-lock.json
+# backend/package.json
+
+smart-contract/artifacts/
+smart-contract/cache/
+
+# Loại trừ file log hoặc temp
+*.log
+*.tmp
+*.json
+
+# Loại trừ các file hệ thống không cần thiết
+.DS_Store
+Thumbs.db

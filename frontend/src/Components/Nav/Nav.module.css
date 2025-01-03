@@ -1,0 +1,268 @@
+.nav_wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+
+    
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    left: 0;
+}
+
+.ScrollNav{
+    background-color: #fff;
+    box-shadow: 4px 0 5px rgba(131, 131, 131, 0.5);
+}
+
+/* .topNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 12%;
+    border-bottom: 1px solid #9b804e;
+} */
+/* 
+.topNav .left_side{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topNav .left_side span{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.topNav .right_side{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.topNav .right_side span{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+} */
+
+.bottom_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12%;
+    height: 80px;
+    align-items: center;
+}
+
+.bottom_nav .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #9b804e;
+    letter-spacing: 2px;
+}
+
+.bottom_nav ul li{
+    display: inline-block;
+    margin: 0 12px;
+
+    position: relative;
+}
+
+.bottom_nav ul li::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #9b804e;
+    border-radius: 50%;
+    transition: .6s;
+}
+
+.bottom_nav ul li:hover:after{
+    width: 100%;
+}
+
+.bottom_nav ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    color: #9b804e;
+}
+
+
+.navBtns{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bars{
+    height: 40px;
+    width: 40px;
+    margin-top: 12px;
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+
+    display: none;
+}
+
+.bars:active{
+    transform: scale(0.9);
+}
+
+
+.bars:hover{
+    background-color: rgba(131, 131, 131, 0.1);
+}
+
+.bars span{
+    height: 12px;
+    width: 12px;
+    border: 1.8px solid #9b804e;
+    border-radius: 50%;
+    position: absolute;
+
+    transition: .6s;
+}
+
+.bars span:nth-child(1){
+    top: 0;
+    left: 0;
+}
+
+.bars span:nth-child(2){
+    top: 20px;
+    left: 0;
+}
+
+.bars span:nth-child(3){
+    top: 0;
+    left: 20px;
+}
+
+.bars span:nth-child(4){
+    top: 20px;
+    left: 20px;
+}
+
+.bars:hover span:nth-child(1){
+    border-radius: 0;
+    height: 2px;
+    width: 60%;
+    top: 10px;
+    left: 20%;
+    transform: rotate(180deg);
+}
+
+.bars:hover span:nth-child(2){
+    border-radius: 0;
+    height: 2px;
+    width: 60%;
+    top: 19px;
+    left: 20%;
+    transform: rotate(180deg);
+}
+
+.bars:hover span:nth-child(3){
+    border-radius: 0;
+    height: 2px;
+    width: 60%;
+    top: 28px;
+    left: 20%;
+    transform: rotate(180deg);
+}
+.bars:hover span:nth-child(4){
+    display: none;
+}
+
+
+@media screen and (max-width:1400px) {
+    .bottom_nav ul li{
+        margin: 0 6px;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .bars{
+        display: block;
+    }
+
+    .bottom_nav ul{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: #9b804e;
+        transition: .6s;
+    }
+
+    .bottom_nav ul li{
+        display: block;
+        padding: 25px 0;
+        padding-left: 12%;
+    }
+
+    .bottom_nav ul li a{
+        color: #fff;
+    }
+
+
+    /* .homebtn{
+        color: #9b804e;
+        display: block;
+        padding: 25px 0;
+        padding-left: 12%;
+
+    } */
+
+    .bottom_nav .showMenu{
+        left: 0;
+    }
+
+
+}
+
+@media screen and (max-width:300px) {
+    .topNav .left_side span:nth-of-type(2) ,
+    .bottom_nav{
+        display: none;
+    }
+
+}
+
+.navBtns button {
+    display: block; /* Đảm bảo luôn hiển thị */
+}
+
+/* Responsive chỉnh sửa */
+@media screen and (max-width:1200px) {
+    .navBtns {
+        flex-direction: column; /* Sắp xếp theo chiều dọc khi responsive */
+        align-items: center;
+        gap: 8px;
+    }
+
+    .bottom_nav ul {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: #9b804e;
+        transition: .6s;
+    }
+
+    .bottom_nav .showMenu {
+        left: 0;
+    }
+
+    .navBtns button {
+        margin-top: 10px;
+        padding: 8px 16px;
+    }
+}

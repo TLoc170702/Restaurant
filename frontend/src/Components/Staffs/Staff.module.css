@@ -1,0 +1,47 @@
+.staff_title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.staff_title h2{
+    font-size: 54px;
+    font-weight: 500;
+}
+
+.Staff_card{
+    width: 100%;
+}
+
+.Staff_card img {
+    width: 100%;
+}
+
+.staff_title p{
+    width: 40%;
+}
+
+.staff_details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.staff_details h3{
+    font-size: 35px;
+    color: #9b804e;
+}
+
+.staff_details p{
+    font-size: 18px;
+}
+
+@media screen and (max-width:500px) {
+    .staff_title p{
+        width: 100%;
+    }
+}
