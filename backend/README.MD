@@ -1,5 +1,5 @@
 # React 
-Template này được sử dụng cho video fullstack React/Nodejs JWT của tác giả Hỏi Dân IT (Eric)
+Template này được sử dụng cho video fullstack React/Nodejs JWT 
 
 ### Môi trường chạy dự án: Node.js v20.14.0
 https://nodejs.org/download/release/v20.14.0/
