@@ -1,18 +1,20 @@
 const jwt = require('jsonwebtoken');
 
+const whileLists = [
+    "/",
+    "/register",
+    "/login",
+    "/admin/feedbacks",
+    "/admin/offers",
+    "/admin/rooms",
+    "/admin/staffs",
+    "/admin/editroom",
+].map(item => `/v1/api${item}`);
+
 const auth = (req, res, next) => {
-    const whileLists = [
-        "/", 
-        "/register", 
-        "/login",
-        // "/admin/feedbacks",
-        // "/admin/offers",
-        // "/admin/rooms",
-        // "/admin/editroom/:id",
-        // "/admin/staffs"
-    ].map(item => `/v1/api${item}`);
 
     const isWhitelisted = whileLists.some(path => path === req.originalUrl);
+    // const isWhitelisted = whileLists.some(path => req.originalUrl.startsWith(path));
 
     if (isWhitelisted) {
         return next();
@@ -59,21 +61,14 @@ const auth = (req, res, next) => {
 const authorizeAdmin = (req, res, next) => {
     console.log(req.user);
 
-    // const whileLists = [
-    //     "/feedbacks",
-    //     "/offers",
-    //     "/rooms",
-    //     "/editroom/:id",
-    //     "/staffs"
-    // ].map(item => `/v1/api/admin${item}`);
-
     // const isWhitelisted = whileLists.some(path => path === req.originalUrl);
+    const isWhitelisted = whileLists.some(path => req.originalUrl.startsWith(path));
 
-    // if (isWhitelisted) {
-    //     return next();
-    // }
+    if (isWhitelisted) {
+        return next();
+    }
 
-    if (req.user?.role !== 'admin') { 
+    if (req.user?.role !== 'admin') {
         return res.status(403).json({
             success: false,
             message: "Access denied. Admins only."

@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 import testimonialCSS from './../Testimonials/Testimonial.module.css'
 import { getFeedbackApi } from '../../util/api';
 
-import user_1 from './../../assets/home-testimonial-1.jpg'
-import user_2 from './../../assets/home-testimonial-2.jpg'
-import user_3 from './../../assets/home-testimonial-3.jpg'
-
 function Testimonial() {
 
     const [feedback, setFeedback] = useState([]);
@@ -57,28 +53,6 @@ function Testimonial() {
                         </div>
                     </div>
                 ))}
-                {/* 
-
-                <div className={testimonialCSS.card}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo labore obcaecati repellendus minus incidunt tempora molestias eveniet ipsam, nostrum deserunt ipsum corporis magnam aliquam distinctio reiciendis saepe architecto.</p>
-
-                    <div className={testimonialCSS.profile}>
-                        <img src={user_2} alt="user-image" />
-                        <h2>Lawrance <span>Teacher</span></h2>
-
-                        <i className="ri-double-quotes-l"></i>
-                    </div>
-                </div>
-                <div className={testimonialCSS.card}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo labore obcaecati repellendus minus incidunt tempora molestias eveniet ipsam, nostrum deserunt ipsum corporis magnam aliquam distinctio reiciendis saepe architecto.</p>
-
-                    <div className={testimonialCSS.profile}>
-                        <img src={user_3} alt="user-image" />
-                        <h2>Victoria <span>Lawer</span></h2>
-
-                        <i className="ri-double-quotes-l"></i>
-                    </div>
-                </div> */}
             </div>
         </div>
     )

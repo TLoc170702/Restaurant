@@ -191,13 +191,11 @@ const orderApi = async (payload) => {
     if (!token) {
       throw new Error('Token not found. User is not authenticated.');
     }
-
     const response = await axios.post("/v1/api/admin/orderroom", payload, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
-
     return response.data;
   } catch (error) {
     console.error('Error in API call:', error);

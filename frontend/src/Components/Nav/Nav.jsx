@@ -47,7 +47,7 @@ function Nav() {
                     <li><Link to="/Room">Rooms</Link></li>
                     <li><a href="#offer">Offer</a></li>
                     <li><a href="#staffs">Our Staffs</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#testimonials">Feedback</a></li>
                 </ul>
 
                 <div className={navCSS.navBtns}>

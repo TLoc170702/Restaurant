@@ -100,7 +100,7 @@ const EditConfirm = () => {
     return (
         <div>
             <Typography variant="h4" gutterBottom style={{ color: '#1976d2' }}>
-                Edit confirm
+                Confirm
             </Typography>
             <Paper style={{ padding: '20px', borderRadius: '10px', boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.1)' }}>
                 <form onSubmit={handleSubmit}>
