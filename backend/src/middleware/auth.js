@@ -1,17 +1,13 @@
 const jwt = require('jsonwebtoken');
 
-const whileLists = [
-    "/",
-    "/register",
-    "/login",
-    "/admin/feedbacks",
-    "/admin/offers",
-    "/admin/rooms",
-    "/admin/staffs",
-    "/admin/editroom",
-].map(item => `/v1/api${item}`);
 
 const auth = (req, res, next) => {
+
+    const whileLists = [
+        "/",
+        "/register",
+        "/login",
+    ].map(item => `/v1/api${item}`);
 
     const isWhitelisted = whileLists.some(path => path === req.originalUrl);
     // const isWhitelisted = whileLists.some(path => req.originalUrl.startsWith(path));
@@ -60,6 +56,15 @@ const auth = (req, res, next) => {
 
 const authorizeAdmin = (req, res, next) => {
     console.log(req.user);
+
+    const whileLists = [
+        "/admin/feedbacks",
+        "/admin/offers",
+        "/admin/rooms",
+        "/admin/staffs",
+        "/admin/editroom",
+        "/admin/orderroom",
+    ].map(item => `/v1/api${item}`);
 
     // const isWhitelisted = whileLists.some(path => path === req.originalUrl);
     const isWhitelisted = whileLists.some(path => req.originalUrl.startsWith(path));

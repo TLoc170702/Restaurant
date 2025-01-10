@@ -4,17 +4,17 @@ const orderController = require('../controllers/orderController');
 
 const router = express.Router();
 const upload = require('../middleware/upload');
-router.all("*", auth);
+router.all("*", auth, authorizeAdmin);
 
 router.post('/orderroom', orderController.orderRoom);
 
-router.get('/orders',authorizeAdmin, orderController.getAllOrderRooms);
+router.get('/orders', orderController.getAllOrderRooms);
 
-router.get('/orders/:id',authorizeAdmin, orderController.getOrderRoomByIdController);
+router.get('/orders/:id', orderController.getOrderRoomByIdController);
 
-router.put('/editorder/:id',authorizeAdmin, orderController.editOrder);
+router.put('/editorder/:id', orderController.editOrder);
 
-router.delete('/deleteorder/:id',authorizeAdmin, orderController.removeOrder);
+router.delete('/deleteorder/:id', orderController.removeOrder);
 
 
 
